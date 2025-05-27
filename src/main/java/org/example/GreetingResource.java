@@ -1,35 +1,18 @@
 package org.example;
 
 
-import jakarta.annotation.security.RolesAllowed;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.MediaType;
-
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import io.micrometer.core.instrument.DistributionSummary;
 
-// import org.eclipse.microprofile.metrics.annotation.Counted;
-// import org.eclipse.microprofile.metrics.annotation.Timed;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tags;
 import io.opentelemetry.instrumentation.annotations.WithSpan;
-
 import jakarta.inject.Inject;
-import jakarta.validation.constraints.NotNull;
-
-
-// import org.eclipse.microprofile.faulttolerance.Fallback;
-// import org.eclipse.microprofile.faulttolerance.Retry;
-// import org.eclipse.microprofile.faulttolerance.Timeout;
-// import org.eclipse.microprofile.metrics.annotation.Gauge;
-
-
-import io.quarkus.cache.CacheResult;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 
 @Path("/test")
