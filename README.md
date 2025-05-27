@@ -80,18 +80,18 @@ podman run --rm -p 4317:4317 \
 
 ## otel-config.yaml
 
-receivers:
-  otlp:
-    protocols:
-      grpc:
-        endpoint: 0.0.0.0:4317
-
-exporters:
-  debug:
-    verbosity: detailed
-
-service:
-  pipelines:
-    traces:
-      receivers: [otlp]
-      exporters: [debug]
+  receivers:
+    otlp:
+      protocols:
+        grpc:
+          endpoint: 0.0.0.0:4317
+  
+  exporters:
+    debug:
+      verbosity: detailed
+  
+  service:
+    pipelines:
+      traces:
+        receivers: [otlp]
+        exporters: [debug]
